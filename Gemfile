@@ -10,3 +10,5 @@ gem "grpc-web"
 gem "solargraph"
 gem "pry"
 gem "rack"
+gem "sinatra"
+gem 'httparty'
