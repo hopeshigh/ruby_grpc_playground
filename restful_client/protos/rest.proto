@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+service Rest {
+	rpc Echo (EchoMessage) returns (EchoMessage) {}
+}
+
+message EchoMessage {
+	string value = 1;
+}
+

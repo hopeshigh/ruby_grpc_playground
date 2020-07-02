@@ -13,6 +13,9 @@ GEM
       google-protobuf (~> 3.11)
       googleapis-common-protos-types (~> 1.0)
     grpc-tools (1.28.0)
+    grpc-web (1.0.1)
+      grpc (~> 1.0)
+      rack (>= 1.6.0, < 3.0)
     jaro_winkler (1.5.4)
     maruku (0.7.3)
     method_source (1.0.0)
@@ -25,6 +28,7 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    rack (2.2.3)
     rainbow (3.0.0)
     regexp_parser (1.7.1)
     reverse_markdown (2.0.0)
@@ -67,7 +71,9 @@ PLATFORMS
 DEPENDENCIES
   grpc
   grpc-tools
+  grpc-web
   pry
+  rack
   solargraph
 
 BUNDLED WITH
