@@ -17,10 +17,23 @@ class ReverseServer < Reverse::Service
   end
 end
 
+class AnotherServer < Another::Service
+  def echo(another_req, unused_call)
+    p reverse_req
+    p unused_call
+    Message.new(value: "#{reverse_req.value}")
+  end
+
+  def ping(another_req, unused_call)
+    Message.new(value: "PONG VALUE")
+  end
+end
+
 def main
   s = GRPC::RpcServer.new
   s.add_http2_port('0.0.0.0:50051', :this_port_is_insecure)
   s.handle(ReverseServer)
+  s.handle(AnotherServer)
 
   p "Starting server on port 50051..."
 

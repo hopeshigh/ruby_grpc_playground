@@ -45,14 +45,14 @@ ruby server.rb
 * Post a JSON request to the running `echo` server
 
 ```shell
-curl -X POST localhost:51051/echo \
+curl -X POST localhost:51051/another/echo \
 -d '{ "value": "This should work" }'
 ```
 
 * Send a GET request to the running `echo` server
 
 ```shell
-curl -X GET localhost:51051/ping 
+curl -X GET localhost:51051/revserse/ping 
 ```
 
 * Post a gRPC request to the running `echo` server

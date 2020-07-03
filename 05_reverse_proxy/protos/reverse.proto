@@ -6,14 +6,14 @@ import "google/protobuf/empty.proto";
 service Reverse {
 	rpc Echo (Message) returns (Message) {
 		option (google.api.http) = {
-			post: "/echo",
-			body: "*"
+			post: "/reverse/echo",
+			body: "value"
 		};
 	}
 
 	rpc Ping (google.protobuf.Empty) returns (Message) {
 		option (google.api.http) = {
-			get: "/ping"
+			get: "/reverse/ping"
 		};
 	}
 }
@@ -21,14 +21,14 @@ service Reverse {
 service Another {
 	rpc Echo (Message) returns (Message) {
 		option (google.api.http) = {
-			post: "/echo",
-			body: "*"
+			post: "/another/echo",
+			body: "value"
 		};
 	}
 
 	rpc Ping (google.protobuf.Empty) returns (Message) {
 		option (google.api.http) = {
-			get: "/ping"
+			get: "/another/ping"
 		};
 	}
 }

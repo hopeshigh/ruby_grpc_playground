@@ -10,6 +10,7 @@ def main
   value = SecureRandom.uuid
   hostname = 'localhost:51051'
   stub = Reverse::Stub.new(hostname, :this_channel_is_insecure)
+  another = Another::Stub.new(hostname, :this_channel_is_insecure)
 
   begin
     response = stub.echo(Message.new(value: value)).value
@@ -17,6 +18,13 @@ def main
 
     pong = stub.ping(Message.new(value: value)).value
     p "Pong Reponse: #{pong}"
+
+
+    another_response = another.echo(Message.new(value: value)).value
+    p "Another Reponse: #{another_response}"
+
+    another_pong = another.ping(Message.new(value: value)).value
+    p "Another Pong Reponse: #{another_pong}"
   rescue GRPC::BadStatus => e
     abort "ERROR: #{e.message}"
   end
