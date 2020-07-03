@@ -52,7 +52,7 @@ curl -X POST localhost:51051/another/echo \
 * Send a GET request to the running `echo` server
 
 ```shell
-curl -X GET localhost:51051/revserse/ping 
+curl -X GET localhost:51051/reverse/ping 
 ```
 
 * Post a gRPC request to the running `echo` server
