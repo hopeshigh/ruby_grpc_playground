@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service Reverse {
+	rpc Echo (Message) returns (Message) {
+		option (google.api.http) = {
+			post: "/echo",
+			body: "*"
+		};
+	}
+
+	rpc Ping (google.protobuf.Empty) returns (Message) {
+		option (google.api.http) = {
+			get: "/ping"
+		};
+	}
+}
+
+service Another {
+	rpc Echo (Message) returns (Message) {
+		option (google.api.http) = {
+			post: "/echo",
+			body: "*"
+		};
+	}
+
+	rpc Ping (google.protobuf.Empty) returns (Message) {
+		option (google.api.http) = {
+			get: "/ping"
+		};
+	}
+}
+
+message Message {
+	string value = 1;
+}
+
