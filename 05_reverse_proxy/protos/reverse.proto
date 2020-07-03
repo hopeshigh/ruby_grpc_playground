@@ -7,7 +7,7 @@ service Reverse {
 	rpc Echo (Message) returns (Message) {
 		option (google.api.http) = {
 			post: "/reverse/echo",
-			body: "value"
+			body: "*"
 		};
 	}
 
@@ -22,7 +22,7 @@ service Another {
 	rpc Echo (Message) returns (Message) {
 		option (google.api.http) = {
 			post: "/another/echo",
-			body: "value"
+			body: "*"
 		};
 	}
 

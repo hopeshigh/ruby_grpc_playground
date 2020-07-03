@@ -7,8 +7,6 @@ require 'reverse_services_pb'
 
 class ReverseServer < Reverse::Service
   def echo(reverse_req, unused_call)
-    p reverse_req
-    p unused_call
     Message.new(value: "#{reverse_req.value}")
   end
 
@@ -19,9 +17,7 @@ end
 
 class AnotherServer < Another::Service
   def echo(another_req, unused_call)
-    p reverse_req
-    p unused_call
-    Message.new(value: "#{reverse_req.value}")
+    Message.new(value: "#{another_req.value}")
   end
 
   def ping(another_req, unused_call)
