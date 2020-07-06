@@ -15,8 +15,20 @@ to vendor the implementation within the repo.
 It also adds an additional step within our [Makefile](./Makefile) to generate the
 neccessary `file descriptors` that Envoy will use to generate the mapping in our proxy.
 
+** NOTE **:
+Before running the following instructions we will need a local copy of the [Google common protos](https://github.com/googleapis/api-common-protos)
+
 
 ## Instructions
+
+* Clone down a local copy of Google common protos
+
+```shell
+# Move to reverse proxy directory if neccessary
+cd ./05_reverse_proxy
+
+git clone git@github.com:googleapis/api-common-protos.git google-vendor-protos/
+```
 
 * Compile our protobuf service definitions and generate our Ruby definitions
 
