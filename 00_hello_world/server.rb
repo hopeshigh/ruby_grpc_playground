@@ -20,6 +20,8 @@ def main
   s.add_http2_port('0.0.0.0:50051', :this_port_is_insecure)
   s.handle(GreeterServer)
 
+  p "Starting server on port 50051..."
+
   s.run_till_terminated_or_interrupted([1, 'int', 'SIGQUIT'])
 end
 
