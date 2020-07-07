@@ -8,7 +8,7 @@ Contents:
 
 * [Hello World](./00_hello_world)
 * [Slightly More Complex](./01_slightly_more_complex)
-* [Using JSON](./02_slightly_more_complex)
+* [Using JSON](./02_using_json)
 * [Authentication via Interceptors](./03_auth_interceptors)
 * [Protobuf over HTTP/1](./04_protobuff_over_http)
 * [Restful Client](./05_restful_client)
