@@ -25,7 +25,7 @@ Before running the following instructions we will need a local copy of the [Goog
 
 ```shell
 # Move to reverse proxy directory if neccessary
-cd ./05_reverse_proxy
+cd ./06_reverse_proxy
 
 git clone git@github.com:googleapis/api-common-protos.git google-vendor-protos/
 ```
