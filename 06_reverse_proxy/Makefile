@@ -12,4 +12,4 @@ descriptor:
 --descriptor_set_out=./lib/proto.pb ./protos/*.proto
 
 clean:
-	@rm -rf ./lib && mkdir lib
+	@rm ./lib/*
