@@ -13,4 +13,5 @@ Contents:
 * [Protobuf over HTTP/1](./04_protobuff_over_http)
 * [Restful Client](./05_restful_client)
 * [JSON transcoding via Envoy reverse proxy](./06_reverse_proxy)
+* [Testing example](./07_testing)
 

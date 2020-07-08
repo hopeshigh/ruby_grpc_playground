@@ -1,10 +1,10 @@
-# Slightly More Complex
+# Using JSON
 
 ## Concept
 
-To demonstrate a slightly more complex example using gRPC.
+To demonstrate how to define and create a Message using a JSON blob.
 
-Service definitions can be found in [./protos/slightly_more_complex.proto](./protos/slightly_more_complex.proto)
+Service definitions can be found in [./protos/using_json.proto](./protos/using_json.proto)
 
 ## Instructions
 
