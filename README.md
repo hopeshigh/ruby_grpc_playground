@@ -14,4 +14,5 @@ Contents:
 * [Restful Client](./05_restful_client)
 * [JSON transcoding via Envoy reverse proxy](./06_reverse_proxy)
 * [Testing example](./07_testing)
+* [Chaining Intereptors](./08_chaining_interceptors)
 

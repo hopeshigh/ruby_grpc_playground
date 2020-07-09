@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Chain {
+	rpc DoAThing (ThingRequest) returns (ThingReply) {}
+}
+
+message ThingRequest {
+	string payload = 1;
+}
+
+message ThingReply {
+	string payload = 1;
+}
